@@ -1,3 +1,13 @@
+# 常用用法
+## 单文件使用db链接编译方法
+```
+g++ -o write_test test.cpp ../build/libleveldb.a -I ../build/include -I ../include -I .. -std=c++11 -g -DLEVELDB_PLATFORM_POSIX -DLEVELDB_HAS_PORT_CONFIG_H -lpthread -DWRITE_MODE
+
+g++ -o read_test test.cpp ../build/libleveldb.a -I ../build/include -I ../include -I .. -std=c++11 -g -DLEVELDB_PLATFORM_POSIX -DLEVELDB_HAS_PORT_CONFIG_H -lpthread
+```
+
+
+
 LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.
 
 > **This repository is receiving very limited maintenance. We will only review the following types of changes.**
